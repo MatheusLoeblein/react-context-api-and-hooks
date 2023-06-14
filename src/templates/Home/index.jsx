@@ -1,11 +1,8 @@
-import "./styles.css";
-import { useState, useEffect, useCallback } from "react";
-import { loadPosts } from "../../utils/load-posts";
-import { Posts } from "../../components/Posts";
-import { Button } from "../../components/Button";
-import { TextInput } from "../../components/TextInput";
+import { useCounterContext } from "../../CounterContext";
 
 export const Home = () => {
+  const [state, dispatch] = useCounterContext();
+
   return (
     <div>
       <h1>Oi</h1>
